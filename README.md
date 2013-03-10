@@ -19,7 +19,7 @@ git clone git://github.com/eoneill/JSHintMate.tmbundle.git
 
 ## Usage
 
-* `⌘S` - quick Hinting on save
+* `⌘S` - quick Hinting on save (actually bound to document save, not specifically the key bind)
 * `⌘K` - detailed Hinting
 
 ## Lots of inspiration
