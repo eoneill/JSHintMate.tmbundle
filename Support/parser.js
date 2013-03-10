@@ -27,7 +27,7 @@
     var total = array.length;
     if(max && total > max) {
       array = array.slice(0, max);
-      array.push({unused : '... and ' + (total - max) + ' more'});
+      array.push({error : '... and ' + (total - max) + ' more'});
     }
     return array;
   }
