@@ -10,10 +10,6 @@ module JSHintMate
     end
   end
 
-  def self.warn_about_unused_variables?
-    %w[true 1 on yes y].include?(ENV['TM_JSHINTMATE_WARN_ABOUT_UNUSED_VARIABLES'])
-  end
-
 private
 
   CONFIG    = '.jshintrc'
@@ -32,7 +28,7 @@ private
     return config
   end
 
-  def self.parser(parser = :detailed)
+  def self.parser(parser = :detail)
     return File.join(File.dirname(__FILE__), REPORTERS[parser] || REPORTERS[:detail])
   end
 
