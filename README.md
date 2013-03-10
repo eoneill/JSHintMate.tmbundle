@@ -30,10 +30,11 @@ Make it work your way. Set these configuration options in your project `.tm_prop
 * `TM_JSHINTMATE_COMMAND` - the JSHint command to run (e.g. `/path/to/custom/jshint {FILE} --config {CONFIG} --reporter {REPORTER}`)
 * `TM_JSHINTMATE_REPORTER` - the path to a custom reporter file
 * `TM_JSHINTMATE_CONFIG` - the path to a custom JSHint config file
+  * by default it will walk up the project tree to find the nearest `.jshintrc`, then looks for `~/.jshintrc`
 * `TM_JSHINTMATE_WARN` - whether or not to show warnings (default: `false`)
 * `TM_JSHINTMATE_WARN_UNUSED` - whether or not to show `unused variable` warnings (default: `$TM_JSHINTMATE_WARN`)
 * `TM_JSHINTMATE_WARN_GLOBALS` - whether or not to list global variables (default: `$TM_JSHINTMATE_WARN`)
-* `TM_JSHINTMATE_RAW` - if set to true, will display the raw JSON output (default: `false`)
+* `TM_JSHINTMATE_RAW` - if set to `true`, will display the raw JSON output (default: `false`)
 
 ## Lots of inspiration
 ... and borrowed code :)
