@@ -1,10 +1,10 @@
 # JSHintMate
 
-Easy JSHinting for TextMate2
+Easy JSHinting for TextMate2, using Node.js and JSHint
 
 ## Installation
 
-Install Node.js and [JSHint](http://www.jshint.com/install/) (globally with `-g`)
+Install [Node.js](http://nodejs.org/) and [JSHint](http://www.jshint.com/install/) (globally with `-g`)
 
 * Once JSHint is installed, you'll need to add it's path to your TextMate `$PATH` under TextMate > Perferences > Variables.
 * For average Node installs, JSHint is installed in `/usr/local/bin`. If it's not there, you can use `which jshint` to find the path.
@@ -24,7 +24,7 @@ git clone git://github.com/eoneill/JSHintMate.tmbundle.git
 
 ## Configuration
 
-Make it work your way. Set these configuration options in your project `.tm_properties`:
+Make it work the way you do. Set these configuration options in your project `.tm_properties`:
 
 * `TM_JSHINTMATE_PEVIEW_MAX` - max number of items to show in the preview (on save) (default: `5`, set to `no` for unlimited)
 * `TM_JSHINTMATE_COMMAND` - the JSHint command to run (e.g. `/path/to/custom/jshint {FILE} --config {CONFIG} --reporter {REPORTER}`)
@@ -37,6 +37,7 @@ Make it work your way. Set these configuration options in your project `.tm_prop
 * `TM_JSHINTMATE_RAW` - if set to `true`, will display the raw JSON output (default: `false`)
 
 ## Lots of inspiration
+
 ... and borrowed code :)
 
 * https://github.com/uipoet/sublime-jshint
