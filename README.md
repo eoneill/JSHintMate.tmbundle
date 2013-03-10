@@ -22,6 +22,19 @@ git clone git://github.com/eoneill/JSHintMate.tmbundle.git
 * `⌘S` - quick Hinting on save (actually bound to document save, not specifically the key bind)
 * `⌘K` - detailed Hinting
 
+## Configuration
+
+These are all optional:
+
+* `TM_JSHINTMATE_PEVIEW_MAX` - max number of items to show in the preview (on save) (default: `5`, set to `no` for unlimited)
+* `TM_JSHINTMATE_COMMAND` - the JSHint command to run (e.g. `/path/to/custom/jshint {FILE} --config {CONFIG} --reporter {REPORTER}`)
+* `TM_JSHINTMATE_REPORTER` - the path to a custom reporter file
+* `TM_JSHINTMATE_CONFIG` - the path to a custom JSHint config file
+* `TM_JSHINTMATE_WARN` - whether or not to show warnings (default: `false`)
+* `TM_JSHINTMATE_WARN_UNUSED` - whether or not to show `unused variable` warnings (default: `$TM_JSHINTMATE_WARN`)
+* `TM_JSHINTMATE_WARN_GLOBALS` - whether or not to list global variables (default: `$TM_JSHINTMATE_WARN`)
+* `TM_JSHINTMATE_RAW` - if set to true, will display the raw JSON output (default: `false`)
+
 ## Lots of inspiration
 ... and borrowed code :)
 

@@ -2,33 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>beforeRunningCommand</key>
-	<string>nop</string>
-	<key>command</key>
-	<string>#!/usr/bin/env ruby -wKU
+  <key>beforeRunningCommand</key>
+  <string>nop</string>
+  <key>command</key>
+  <string>#!/usr/bin/env ruby -wKU
 require File.join(ENV['TM_BUNDLE_SUPPORT'], 'jshintmate')
 
-JSHintMate.output(ENV['TM_FILEPATH'], ENV['TM_DIRECTORY'], :detail)
+JSHintMate.output(:detail)
 </string>
-	<key>input</key>
-	<string>none</string>
-	<key>inputFormat</key>
-	<string>text</string>
-	<key>keyEquivalent</key>
-	<string>@k</string>
-	<key>name</key>
-	<string>Detailed JSHint</string>
-	<key>outputCaret</key>
-	<string>afterOutput</string>
-	<key>outputFormat</key>
-	<string>html</string>
-	<key>outputLocation</key>
-	<string>newWindow</string>
-	<key>scope</key>
-	<string>source.js</string>
-	<key>uuid</key>
-	<string>A4CE7ACE-8991-443C-A571-16A0584F0427</string>
-	<key>version</key>
-	<integer>2</integer>
+  <key>input</key>
+  <string>none</string>
+  <key>inputFormat</key>
+  <string>text</string>
+  <key>keyEquivalent</key>
+  <string>@k</string>
+  <key>name</key>
+  <string>Detailed JSHint</string>
+  <key>outputCaret</key>
+  <string>afterOutput</string>
+  <key>outputFormat</key>
+  <string>html</string>
+  <key>outputLocation</key>
+  <string>newWindow</string>
+  <key>scope</key>
+  <string>source.js</string>
+  <key>uuid</key>
+  <string>A4CE7ACE-8991-443C-A571-16A0584F0427</string>
+  <key>version</key>
+  <integer>2</integer>
 </dict>
 </plist>

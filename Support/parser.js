@@ -1,7 +1,9 @@
 (function() {
   'use strict';
 
+  var env = process.env || process.ENV || {};
   var buffer = '';
+  var true_rx = /^(?:true|yes|1)$/i;
 
   function numberWang(wangaNumb) {
     var
@@ -23,26 +25,36 @@
     process.stdout.write(buffer);
   }
 
-  function trimArray(array, max) {
-    var total = array.length;
-    if(max && total > max) {
-      array = array.slice(0, max);
-      array.push({error : '... and ' + (total - max) + ' more'});
+  function getErrors(errors) {
+    return errors;
+  }
+
+  function getUnused(results) {
+    // by default we'll hide unused var warnings (in detailed view),
+    // you can turn this off by setting TM_JSHINTMATE_WARN_UNUSED = true in your .tm_properties
+    if(!true_rx.test(env.TM_JSHINTMATE_WARN_UNUSED)) {
+      return [];
     }
-    return array;
-  }
-
-  function getErrors(errors, max) {
-    return trimArray(errors, max);
-  }
-
-  function getUnused(results, max) {
     var unused = [];
     // add on all unused var warnings
     results.forEach(function (result) {
       unused = unused.concat(result.unused || []);
     });
-    return trimArray(unused, max);
+    return unused;
+  }
+
+  function getGlobals(results) {
+    // by default we'll hide the list of global vars (in detailed view),
+    // you can turn this off by setting TM_JSHINTMATE_WARN_GLOBALS = true in your .tm_properties
+    if(!true_rx.test(env.TM_JSHINTMATE_WARN_GLOBALS)) {
+      return [];
+    }
+    var globals = [];
+    // add on all unused var warnings
+    results.forEach(function (result) {
+      globals = globals.concat(result.globals || []);
+    });
+    return globals;
   }
 
   // expose the interface
@@ -51,6 +63,7 @@
     log:        log,
     stdout:     stdout,
     getErrors:  getErrors,
-    getUnused:  getUnused
+    getUnused:  getUnused,
+    getGlobals: getGlobals
   };
 })();
