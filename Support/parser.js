@@ -18,11 +18,11 @@
     buffer += args.join('');
     buffer += '\n';
   }
-  
+
   function stdout() {
     process.stdout.write(buffer);
   }
-  
+
   function trimArray(array, max) {
     var total = array.length;
     if(max && total > max) {
@@ -35,7 +35,7 @@
   function getErrors(errors, max) {
     return trimArray(errors, max);
   }
-  
+
   function getUnused(results, max) {
     var unused = [];
     // add on all unused var warnings
