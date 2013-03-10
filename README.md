@@ -17,6 +17,11 @@ cd ~/Library/Application\ Support/Avian/Bundles
 git clone git://github.com/eoneill/JSHintMate.tmbundle.git
 ```
 
+## Usage
+
+* `⌘S` - quick Hinting on save
+* `⌘K` - detailed Hinting
+
 ## Lots of inspiration
 ... and borrowed code :)
 
