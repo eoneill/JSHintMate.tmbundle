@@ -24,7 +24,7 @@ git clone git://github.com/eoneill/JSHintMate.tmbundle.git
 
 ## Configuration
 
-Make it work your way. Set this configuration options in your project `.tm_properties`:
+Make it work your way. Set these configuration options in your project `.tm_properties`:
 
 * `TM_JSHINTMATE_PEVIEW_MAX` - max number of items to show in the preview (on save) (default: `5`, set to `no` for unlimited)
 * `TM_JSHINTMATE_COMMAND` - the JSHint command to run (e.g. `/path/to/custom/jshint {FILE} --config {CONFIG} --reporter {REPORTER}`)
